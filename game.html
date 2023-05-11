@@ -1,0 +1,2250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<script src="https://cdn.tailwindcss.com"></script>
+	<link href="app.css" rel="stylesheet" />
+  </head>
+  <body class="select-none">
+
+	<!-- bg logo -->
+	<div
+		class="
+			hidden
+			absolute
+			z-index-0
+			w-full
+			h-full
+			opacity-40
+		"
+	>
+		<div class="flex justify-start items-center w-[0.64%] min-h-screen mx-auto ">
+			<div class="logo w-4/5 h-full"></div>
+		</div>
+	</div>
+
+	<!-- layout -->
+	<div
+		class="
+			relative
+			z-index-10
+			flex
+			justify-center
+			items-center
+			w-full md:w-4/5
+			min-h-screen
+			mx-auto
+			py-5
+		"
+	>
+		<div
+			class="
+				flex
+				flex-row
+				justify-center
+				items-center
+				w-full
+				px-2 md:px-none
+			"
+		>
+			<div 
+				class="
+					grid
+					grid-cols-5
+					gap-5
+					auto-cols-max
+					justify-center 
+					items-center
+					w-full
+				"
+			>
+
+				<!-- help, question, answer options -->
+				<div
+					class="
+						col-span-5
+						lg:col-span-4
+						flex
+						flex-col
+						gap-y-2 md:gap-y-3 lg:gap-4 xl:gap-y-5
+					"
+				>
+
+					<!-- help buttons -->
+					<div 
+						class="
+							flex
+							flex-row
+							w-full
+						"
+					>
+						<div 
+							class="
+								flex
+								flex-row
+								w-full
+								justify-between
+							"
+						>
+							<div
+								class="
+									flex
+									flex-row
+									gap-x-1 md:gap-x-2
+								"
+							>
+								<!-- help call -->
+								<div 
+									id="helpButtonCall"
+									class="
+										helplineButton
+										cursor-pointer
+										flex
+										flex-row
+										p-[0.05rem] md:p-0.5 
+										rounded-xl
+										bg-gradient-to-tl from-[#eae885] via-[#7e5824] to-[#eae885]
+									"
+								>
+									<div
+										class="
+											flex
+											justify-center
+											items-center
+											w-9 md:w-14 xl:w-16
+											h-9 md:h-14 xl:h-16
+											rounded-xl
+											bg-gradient-to-tl from-[#7e5824] via-[#eae885] to-[#7e5824]
+										"
+									>
+										<div
+											class="
+												flex
+												w-full
+												h-full
+												justify-center
+												items-center
+												bg-clip-text 
+												text-transparent
+												fill-slate-900
+											"
+										>
+											<svg 
+												xmlns="http://www.w3.org/2000/svg" 
+												viewBox="0 0 512 512" 
+												class="
+													h-4 md:h-6 xl:h-7
+												"
+											>
+												<path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/>
+											</svg>
+										</div>
+									</div>
+								</div>
+
+								<!-- help audience -->
+								<div 
+									id="helpButtonAudience"
+									class="
+										helplineButton
+										cursor-pointer
+										flex
+										flex-row
+										p-[0.05rem] md:p-0.5 
+										rounded-xl
+										bg-gradient-to-tl from-[#eae885] via-[#7e5824] to-[#eae885]
+									"
+								>
+									<div
+										class="
+											flex
+											justify-center
+											items-center
+											w-9 md:w-14 xl:w-16
+											h-9 md:h-14 xl:h-16
+											rounded-xl
+											bg-gradient-to-tl from-[#7e5824] via-[#eae885] to-[#7e5824]
+										"
+									>
+										<div
+											class="
+												flex
+												w-full
+												h-full
+												justify-center
+												items-center
+												bg-clip-text 
+												text-transparent
+												fill-slate-900
+											"
+										>
+											<svg 
+												mlns="http://www.w3.org/2000/svg" 
+												viewBox="0 0 640 512" 
+												class="
+													h-4 md:h-6 xl:h-7
+												"
+											>
+												<path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM609.3 512H471.4c5.4-9.4 8.6-20.3 8.6-32v-8c0-60.7-27.1-115.2-69.8-151.8c2.4-.1 4.7-.2 7.1-.2h61.4C567.8 320 640 392.2 640 481.3c0 17-13.8 30.7-30.7 30.7zM432 256c-31 0-59-12.6-79.3-32.9C372.4 196.5 384 163.6 384 128c0-26.8-6.6-52.1-18.3-74.3C384.3 40.1 407.2 32 432 32c61.9 0 112 50.1 112 112s-50.1 112-112 112z"/>
+											</svg>
+										</div>
+									</div>
+								</div>
+
+								<!-- help 50% -->
+								<div 
+									id="helpButton50"
+									class="
+										helplineButton
+										cursor-pointer
+										flex
+										flex-row
+										p-[0.05rem] md:p-0.5 
+										rounded-xl
+										bg-gradient-to-tl from-[#eae885] via-[#7e5824] to-[#eae885]
+									"
+								>
+									<div
+										class="
+											flex
+											justify-center
+											items-center
+											w-9 md:w-14 xl:w-16
+											h-9 md:h-14 xl:h-16
+											rounded-xl
+											bg-gradient-to-tl from-[#7e5824] via-[#eae885] to-[#7e5824]
+										"
+									>
+										<div
+											class="
+												flex
+												w-full
+												h-full
+												gap-x-0.5
+												justify-center
+												items-center
+												bg-clip-text 
+												text-transparent
+												fill-slate-900
+											"
+										>
+											<svg 
+												xmlns="http://www.w3.org/2000/svg" 
+												viewBox="0 0 320 512" 
+												class="
+													h-3 md:h-5 xl:h-6
+												"
+											>
+												<path d="M32.5 58.3C35.3 43.1 48.5 32 64 32H256c17.7 0 32 14.3 32 32s-14.3 32-32 32H90.7L70.3 208H184c75.1 0 136 60.9 136 136s-60.9 136-136 136H100.5c-39.4 0-75.4-22.3-93-57.5l-4.1-8.2c-7.9-15.8-1.5-35 14.3-42.9s35-1.5 42.9 14.3l4.1 8.2c6.8 13.6 20.6 22.1 35.8 22.1H184c39.8 0 72-32.2 72-72s-32.2-72-72-72H32c-9.5 0-18.5-4.2-24.6-11.5s-8.6-16.9-6.9-26.2l32-176z"/>
+											</svg>
+											<svg 
+												xmlns="http://www.w3.org/2000/svg" 
+												viewBox="0 0 320 512" 
+												class="
+													h-3 md:h-5 xl:h-6
+												"
+											>
+												<path d="M0 192C0 103.6 71.6 32 160 32s160 71.6 160 160V320c0 88.4-71.6 160-160 160S0 408.4 0 320V192zM160 96c-53 0-96 43-96 96V320c0 53 43 96 96 96s96-43 96-96V192c0-53-43-96-96-96z"/>
+											</svg>
+											<svg 
+												xmlns="http://www.w3.org/2000/svg" 
+												viewBox="0 0 384 512" 
+												class="
+													h-3 md:h-5 xl:h-6
+												"
+											>
+												<path d="M374.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-320 320c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l320-320zM128 128A64 64 0 1 0 0 128a64 64 0 1 0 128 0zM384 384a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- timer & sound-->
+							<div
+								class="
+									flex
+									flex-row
+									gap-x-1 md:gap-x-2
+								"
+							>
+								<!-- sound -->
+								<div 
+									id="soundButton"
+									class="
+										cursor-pointer
+										flex
+										flex-row
+										p-[0.05rem] md:p-0.5 
+										rounded-xl
+										bg-gradient-to-tl from-[#E3E3E3] via-[#5c5c5c] to-[#E3E3E3]
+									"
+								>
+									<div
+										class="
+											flex
+											justify-center
+											items-center
+											w-9 md:w-14 xl:w-16
+											h-9 md:h-14 xl:h-16
+											rounded-xl
+											bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+										"
+									>
+										<div
+											class="
+												flex
+												w-full
+												h-full
+												gap-x-0.5
+												justify-center
+												items-center
+												bg-clip-text 
+												text-transparent
+												fill-slate-900
+											"
+										>
+											<svg 
+												xmlns="http://www.w3.org/2000/svg" 
+												viewBox="0 0 576 512" 
+												class="
+													h-4 md:h-6 xl:h-7
+												"
+											>
+												<path d="M333.1 34.8C344.6 40 352 51.4 352 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L163.8 352H96c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L298.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zm172 72.2c43.2 35.2 70.9 88.9 70.9 149s-27.7 113.8-70.9 149c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C507.3 341.3 528 301.1 528 256s-20.7-85.3-53.2-111.8c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zm-60.5 74.5C466.1 199.1 480 225.9 480 256s-13.9 56.9-35.4 74.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C425.1 284.4 432 271 432 256s-6.9-28.4-17.7-37.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5z"/>
+											</svg>
+											<svg 
+												xmlns="http://www.w3.org/2000/svg" 
+												viewBox="0 0 640 512" 
+												class="
+													hidden
+													h-4 md:h-6 xl:h-7
+												"
+											>
+												<path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7l-88-69C582.8 365 608 313.4 608 256c0-60.1-27.7-113.8-70.9-149c-10.3-8.4-25.4-6.8-33.8 3.5s-6.8 25.4 3.5 33.8C539.3 170.7 560 210.9 560 256s-20.7 85.3-53.2 111.8c-.9 .7-1.7 1.5-2.4 2.3l-43.6-34.2c5.5 .1 11.1-1.6 15.7-5.4C498.1 312.9 512 286.1 512 256s-13.9-56.9-35.4-74.5c-10.3-8.4-25.4-6.8-33.8 3.5s-6.8 25.4 3.5 33.8C457.1 227.6 464 241 464 256s-6.9 28.4-17.7 37.3c-7.6 6.2-10.4 16-8 24.9L384 275.7V64c0-12.6-7.4-24-18.9-29.2s-25-3.1-34.4 5.3l-115.9 103L38.8 5.1zM64 224v64c0 35.3 28.7 64 64 64h67.8L330.7 471.9c9.4 8.4 22.9 10.4 34.4 5.3S384 460.6 384 448V398.5L93.8 169.9C75.9 181.2 64 201.2 64 224z"/>
+											</svg>
+										</div>
+									</div>
+								</div>
+
+								<!-- timer -->
+								<div 
+									class="
+										z-40
+										p-[0.05rem] md:p-0.5 
+										rounded-xl
+										bg-gradient-to-tl from-[#E3E3E3] via-[#5c5c5c] to-[#E3E3E3]
+									"
+								>
+									<div
+										id="timer"
+										class="
+											flex
+											justify-center
+											items-center
+											rounded-xl
+											font-bold
+											bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+											text-slate-900
+											w-[5.5rem] md:w-36 xl:w-40
+											h-9 md:h-14 xl:h-16
+											text-2xl md:text-4xl xl:text-5xl
+										"
+									>
+										30
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<!-- help call -->
+					<div 
+						id="helpButtonCallWindow"
+						class="
+							helpWindowWrapper
+							relative
+							hidden
+							flex-col
+							w-full
+							gap-y-2 md:gap-y-3 lg:gap-4 xl:gap-y-5
+						"
+					>
+						<div
+							class="
+								flex
+								w-full
+								p-0.5 
+								rounded-3xl
+								bg-gradient-to-tl from-[#E3E3E3] via-[#5c5c5c] to-[#E3E3E3]
+								min-h-[6rem]
+							"
+						>
+								<div 
+									class="
+										flex
+										w-full
+										justify-center
+										items-center
+										rounded-3xl
+										bg-gradient-to-r from-slate-900 via-[#001d3d] to-slate-900
+										text-center
+										font-medium
+										p-2
+										text-xs md:text-sm
+									"
+								>
+									Call
+								</div>
+						</div>
+					</div>
+
+					<!-- help audience -->
+					<div 
+						id="helpButtonAudienceWindow"
+						class="
+							helpWindowWrapper
+							relative
+							hidden
+							flex-col
+							w-full
+							gap-y-2 md:gap-y-3 lg:gap-4 xl:gap-y-5
+						"
+					>
+						<div
+							class="
+								flex
+								w-full
+								p-0.5 
+								rounded-3xl
+								bg-gradient-to-tl from-[#E3E3E3] via-[#5c5c5c] to-[#E3E3E3]
+								min-h-[6rem]
+							"
+						>
+								<div 
+									class="
+										flex
+										w-full
+										justify-center
+										items-center
+										rounded-3xl
+										bg-gradient-to-r from-slate-900 via-[#001d3d] to-slate-900
+										text-center
+										font-medium
+										p-2
+										text-xs md:text-sm
+									"
+								>
+									Call
+								</div>
+						</div>
+					</div>
+
+					<!-- help 50 -->
+					<div 
+						id="helpButton50Window"
+						class="
+							helpWindowWrapper
+							relative
+							hidden
+							flex-col
+							w-full
+							gap-y-2 md:gap-y-3 lg:gap-4 xl:gap-y-5
+						"
+					>
+						<div
+							class="
+								flex
+								w-full
+								p-0.5 
+								rounded-3xl
+								bg-gradient-to-tl from-[#E3E3E3] via-[#5c5c5c] to-[#E3E3E3]
+								min-h-[6rem]
+							"
+						>
+								<div 
+									class="
+										flex
+										w-full
+										justify-center
+										items-center
+										rounded-3xl
+										bg-gradient-to-r from-slate-900 via-[#001d3d] to-slate-900
+										text-center
+										font-medium
+										p-2
+										text-xs md:text-sm
+									"
+								>
+									Call
+								</div>
+						</div>
+					</div>
+
+					<!-- score small -->
+					<div 
+						class="
+							relative
+							flex lg:hidden
+							flex-col
+							w-full
+							gap-y-2 md:gap-y-3 lg:gap-4 xl:gap-y-5
+						"
+					>
+						<!-- scoreboard small -->
+						<div
+							class="
+								flex lg:hidden
+								w-full
+								p-0.5 
+								rounded-3xl
+								bg-gradient-to-tl from-[#E3E3E3] via-[#5c5c5c] to-[#E3E3E3]
+								min-h-[6rem]
+							"
+						>
+							<div 
+								class="
+									flex
+									w-full
+									justify-center
+									items-center
+									rounded-3xl
+									bg-gradient-to-r from-[#001d3d] via-[#013a71] to-[#001d3d]
+									text-center
+									font-medium
+									p-2
+									text-xs md:text-sm
+								"
+							>
+								<div class="
+									grid grid-rows-5 grid-flow-col gap-y-1 md:gap-y-2
+									md:grid-rows-3 
+									w-full
+								">
+									<div 
+										class="
+											scoreItemSmall
+											flex 
+											flex-row 
+											rounded-xl
+											justify-center
+											gap-x-0.5
+											mx-3 px-2
+										"
+									>
+										<div 
+											class="
+												flex
+												w-6
+												justify-end
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+												"
+											>
+													1:
+											</span>
+										</div>
+										<div 
+											class="
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+												"
+											>
+													100
+											</span>
+										</div>
+									</div>
+									<div 
+										class="
+											scoreItemSmall
+											flex 
+											flex-row 
+											rounded-xl
+											justify-center
+											gap-x-0.5 xl:gap-x-1.5
+											px-2 xl:px-4
+										"
+									>
+										<div 
+											class="
+												flex
+												w-6
+												justify-end
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+												"
+											>
+													2:
+											</span>
+										</div>
+										<div 
+											class="
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+												"
+											>
+													200
+											</span>
+										</div>
+									</div>
+									<div 
+										class="
+											scoreItemSmall
+											flex 
+											flex-row 
+											rounded-xl
+											justify-center
+											gap-x-0.5 xl:gap-x-1.5
+											px-2 xl:px-4
+										"
+									>
+										<div 
+											class="
+												flex
+												w-6
+												justify-end
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+												"
+											>
+													3:
+											</span>
+										</div>
+										<div 
+											class="
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+												"
+											>
+													300
+											</span>
+										</div>
+									</div>
+									<div 
+										class="
+											scoreItemSmall
+											flex 
+											flex-row 
+											rounded-xl
+											justify-center
+											gap-x-0.5 xl:gap-x-1.5
+											px-2 xl:px-4
+										"
+									>
+										<div 
+											class="
+												flex
+												w-6
+												justify-end
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+												"
+											>
+													4:
+											</span>
+										</div>
+										<div 
+											class="
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+												"
+											>
+													500
+											</span>
+										</div>
+									</div>
+									<div 
+										class="
+											scoreItemSmall
+											flex 
+											flex-row 
+											rounded-xl
+											justify-center
+											gap-x-0.5 xl:gap-x-1.5
+											px-2 xl:px-4
+										"
+									>
+										<div 
+											class="
+												flex
+												w-6
+												justify-end
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#d2a360] via-[#eae885] to-[#d2a360]
+												"
+											>
+													5:
+											</span>
+										</div>
+										<div 
+											class="
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#d2a360] via-[#eae885] to-[#d2a360]
+												"
+											>
+													1.000
+											</span>
+										</div>
+									</div>
+									<div 
+										class="
+											scoreItemSmall
+											flex 
+											flex-row 
+											rounded-xl
+											justify-center
+											gap-x-0.5 xl:gap-x-1.5
+											px-2 xl:px-4
+										"
+									>
+										<div 
+											class="
+												flex
+												w-6
+												justify-end
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+												"
+											>
+													6:
+											</span>
+										</div>
+										<div 
+											class="
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+												"
+											>
+													2.000
+											</span>
+										</div>
+									</div>
+									<div 
+										class="
+											scoreItemSmall
+											flex 
+											flex-row 
+											rounded-xl
+											justify-center
+											gap-x-0.5 xl:gap-x-1.5
+											px-2 xl:px-4
+										"
+									>
+										<div 
+											class="
+												flex
+												w-6
+												justify-end
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+												"
+											>
+													7:
+											</span>
+										</div>
+										<div 
+											class="
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+												"
+											>
+													4.000
+											</span>
+										</div>
+									</div>
+									<div 
+										class="
+											scoreItemSmall
+											flex 
+											flex-row 
+											rounded-xl
+											justify-center
+											gap-x-0.5 xl:gap-x-1.5
+											px-2 xl:px-4
+										"
+									>
+										<div 
+											class="
+												flex
+												w-6
+												justify-end
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+												"
+											>
+													8:
+											</span>
+										</div>
+										<div 
+											class="
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+												"
+											>
+													8.000
+											</span>
+										</div>
+									</div>
+									<div 
+										class="
+											scoreItemSmall
+											flex 
+											flex-row 
+											rounded-xl
+											justify-center
+											gap-x-0.5 xl:gap-x-1.5
+											px-2 xl:px-4
+										"
+									>
+										<div 
+											class="
+												flex
+												w-6
+												justify-end
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+												"
+											>
+													9:
+											</span>
+										</div>
+										<div 
+											class="
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+												"
+											>
+													16.000
+											</span>
+										</div>
+									</div>
+									<div 
+										class="
+											scoreItemSmall
+											flex 
+											flex-row 
+											rounded-xl
+											justify-center
+											gap-x-0.5 xl:gap-x-1.5
+											px-2 xl:px-4
+										"
+									>
+										<div 
+											class="
+												flex
+												w-6
+												justify-end
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#d2a360] via-[#eae885] to-[#d2a360]
+												"
+											>
+													10:
+											</span>
+										</div>
+										<div 
+											class="
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#d2a360] via-[#eae885] to-[#d2a360]
+												"
+											>
+													32.000
+											</span>
+										</div>
+									</div>
+									<div 
+										class="
+											scoreItemSmall
+											flex 
+											flex-row 
+											rounded-xl
+											justify-center
+											gap-x-0.5 xl:gap-x-1.5
+											px-2 xl:px-4
+										"
+									>
+										<div 
+											class="
+												flex
+												w-6
+												justify-end
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+												"
+											>
+													11:
+											</span>
+										</div>
+										<div 
+											class="
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+												"
+											>
+													64.000
+											</span>
+										</div>
+									</div>
+									<div 
+										class="
+											scoreItemSmall
+											flex 
+											flex-row 
+											rounded-xl
+											justify-center
+											gap-x-0.5 xl:gap-x-1.5
+											px-2 xl:px-4
+										"
+									>
+										<div 
+											class="
+												flex
+												w-6
+												justify-end
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+												"
+											>
+													12:
+											</span>
+										</div>
+										<div 
+											class="
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+												"
+											>
+													125.000
+											</span>
+										</div>
+									</div>
+									<div 
+										class="
+											scoreItemSmall
+											flex 
+											flex-row 
+											rounded-xl
+											justify-center
+											gap-x-0.5 xl:gap-x-1.5
+											px-2 xl:px-4
+										"
+									>
+										<div 
+											class="
+												flex
+												w-6
+												justify-end
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+												"
+											>
+													13:
+											</span>
+										</div>
+
+										<div 
+											class="
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+												"
+											>
+													250.000
+											</span>
+										</div>
+									</div>
+									<div 
+										class="
+											scoreItemSmall
+											flex 
+											flex-row 
+											rounded-xl
+											justify-center
+											gap-x-0.5 xl:gap-x-1.5
+											px-2 xl:px-4
+										"
+									>
+										<div 
+											class="
+												flex
+												w-6
+												justify-end
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+												"
+											>
+													14:
+											</span>
+										</div>
+										<div 
+											class="
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+												"
+											>
+													500.000
+											</span>
+										</div>
+									</div>
+									<div 
+										class="
+											scoreItemSmall
+											flex 
+											flex-row 
+											rounded-xl
+											justify-center
+											gap-x-0.5 xl:gap-x-1.5
+											px-2 xl:px-4
+										"
+									>
+										<div 
+											class="
+												flex
+												w-6
+												justify-end
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#d2a360] via-[#eae885] to-[#d2a360]
+												"
+											>
+													15:
+											</span>
+										</div>
+										<div 
+											class="
+												font-bold
+												xl:font-extrabold
+											"
+										>
+											<span 
+												class="
+													bg-clip-text 
+													text-transparent
+													bg-gradient-to-tl from-[#d2a360] via-[#eae885] to-[#d2a360]
+												"
+											>
+													1.000.000
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- question -->
+					<div
+						class="
+							flex
+							w-full
+							p-0.5 
+							rounded-3xl
+							bg-gradient-to-tl from-[#E3E3E3] via-[#5c5c5c] to-[#E3E3E3]
+							min-h-[6rem] xl:min-h-[7rem]
+						"
+					>
+						<div 
+							class="
+								flex
+								w-full
+								justify-center
+								items-center
+								rounded-3xl
+								bg-gradient-to-r from-[#001d3d] via-[#013a71] to-[#001d3d]
+								text-center
+								font-medium
+								p-5 xl:p-6
+								text-xl md:text-2xl xl:text-3xl
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl 
+									from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+								"
+							>
+								What is the ultimate goal of the last impression?
+							</span>
+						</div>
+
+					</div>
+
+					<!-- answer options -->
+					<div 
+						class="
+							grid 
+							w-full
+							grid-cols-1 lg:grid-cols-2
+							gap-y-2 md:gap-y-3 lg:gap-4 xl:gap-y-5
+						"
+					>
+						<div 
+							class="
+								answer
+								flex
+								w-full
+								p-0.5
+								rounded-3xl
+								cursor-pointer
+								bg-gradient-to-tl from-[#E3E3E3] via-[#5c5c5c] to-[#E3E3E3]
+								hover:from-[#eae885] hover:via-[#7e5824] hover:to-[#eae885]
+								group
+								min-h-[3.5rem] xl:min-h-[4.5rem]
+							"
+						>
+							<div 
+								class="
+									flex
+									flex-row
+									gap-x-3
+									w-full
+									h-full
+									items-center
+									rounded-3xl
+									bg-gradient-to-r from-slate-900 via-[#001d3d] to-slate-900
+									py-2 xl:py-3
+									px-5 xl:px-6
+								"
+							>
+								<div 
+									class="
+										font-bold
+										text-sm md:text-base lg:text-lg xl:text-xl
+									"
+								>
+									<span
+										class="
+											bg-clip-text 
+											text-transparent
+											bg-gradient-to-tl from-[#d2a360] via-[#eae885] to-[#d2a360]
+										"
+									>
+										A:
+									</span>
+								</div>
+								<div 
+									class="
+										font-medium
+										text-sm md:text-base xl:text-lg
+									"
+								>
+									<span
+										class="
+											bg-clip-text 
+											text-transparent
+											bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+											group-hover:from-[#d2a360] group-hover:via-[#eae885] group-hover:to-[#d2a360]
+										"
+									>
+										That the customer will greet you whenever she/he sees you.
+									</span>
+								</div>
+							</div>
+						</div>
+						<div 
+							class="
+								answer
+								flex
+								w-full
+								p-0.5
+								rounded-3xl
+								cursor-pointer
+								bg-gradient-to-tl from-[#E3E3E3] via-[#5c5c5c] to-[#E3E3E3]
+								hover:from-[#eae885] hover:via-[#7e5824] hover:to-[#eae885]
+								group
+								min-h-[3.5rem] xl:min-h-[4.5rem]
+							"
+						>
+							<div 
+								class="
+									flex
+									flex-row
+									gap-x-3
+									w-full
+									h-full
+									items-center
+									rounded-3xl
+									bg-gradient-to-r from-slate-900 via-[#001d3d] to-slate-900
+									py-2 xl:py-3
+									px-5 xl:px-6
+								"
+							>
+								<div 
+									class="
+										font-bold
+										text-sm nd:text-base lg:text-lg xl:text-xl
+									"
+								>
+									<span
+										class="
+											bg-clip-text 
+											text-transparent
+											bg-gradient-to-tl from-[#d2a360] via-[#eae885] to-[#d2a360]
+										"
+									>
+										B:
+									</span>
+								</div>
+								<div 
+									class="
+										font-medium
+										text-sm md:text-base xl:text-lg
+									"
+								>
+									<span
+										class="
+											bg-clip-text 
+											text-transparent
+											bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+											group-hover:from-[#d2a360] group-hover:via-[#eae885] group-hover:to-[#d2a360]
+										"
+									>
+										That the customer will not go to your store again.
+									</span>
+								</div>
+							</div>
+						</div>
+						<div 
+							class="
+								answer
+								flex
+								w-full
+								p-0.5
+								rounded-3xl
+								cursor-pointer
+								bg-gradient-to-tl from-[#E3E3E3] via-[#5c5c5c] to-[#E3E3E3]
+								hover:from-[#eae885] hover:via-[#7e5824] hover:to-[#eae885]
+								group
+								min-h-[3.5rem] xl:min-h-[4.5rem]
+							"
+						>
+							<div 
+								class="
+									flex
+									flex-row
+									gap-x-3
+									w-full
+									h-full
+									items-center
+									rounded-3xl
+									bg-gradient-to-r from-slate-900 via-[#001d3d] to-slate-900
+									py-2 xl:py-3
+									px-5 xl:px-6
+								"
+							>
+								<div 
+									class="
+										font-bold
+										text-sm nd:text-base lg:text-lg xl:text-xl
+									"
+								>
+									<span
+										class="
+											bg-clip-text 
+											text-transparent
+											bg-gradient-to-tl from-[#d2a360] via-[#eae885] to-[#d2a360]
+										"
+									>
+										C:
+									</span>
+								</div>
+								<div 
+									class="
+										font-medium
+										text-sm md:text-base xl:text-lg
+									"
+								>
+									<span
+										class="
+											bg-clip-text 
+											text-transparent
+											bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+											group-hover:from-[#d2a360] group-hover:via-[#eae885] group-hover:to-[#d2a360]
+										"
+									>
+										That the customer will not tell their friends about your store.
+									</span>
+								</div>
+							</div>
+						</div>
+						<div 
+							class="
+								answer
+								flex
+								w-full
+								p-0.5
+								rounded-3xl
+								cursor-pointer
+								bg-gradient-to-tl from-[#E3E3E3] via-[#5c5c5c] to-[#E3E3E3]
+								hover:from-[#eae885] hover:via-[#7e5824] hover:to-[#eae885]
+								group
+								min-h-[3.5rem] xl:min-h-[4.5rem]
+							"
+						>
+							<div 
+								class="
+									flex
+									flex-row
+									gap-x-3
+									w-full
+									h-full
+									items-center
+									rounded-3xl
+									bg-gradient-to-r from-slate-900 via-[#001d3d] to-slate-900
+									py-2 xl:py-3
+									px-5 xl:px-6
+								"
+							>
+								<div 
+									class="
+										font-bold
+										text-sm nd:text-base lg:text-lg xl:text-xl
+									"
+								>
+									<span
+										class="
+											bg-clip-text 
+											text-transparent
+											bg-gradient-to-tl from-[#d2a360] via-[#eae885] to-[#d2a360]
+										"
+									>
+										D:
+									</span>
+								</div>
+								<div 
+									class="
+										font-medium
+										text-sm md:text-base xl:text-lg
+									"
+								>
+									<span
+										class="
+											bg-clip-text 
+											text-transparent
+											bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+											group-hover:from-[#d2a360] group-hover:via-[#eae885] group-hover:to-[#d2a360]
+										"
+									>
+										That the customer returns to your store.
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- scoreboard large -->
+				<div
+					class="
+						col-span-1
+						flex-col
+						justify-between
+						h-full
+						hidden lg:flex
+						text-xs md:text-sm lg:text-base xl:text-lg
+					"
+				>
+					<div 
+						class="
+							scoreItemLarge
+							flex 
+							flex-row 
+							rounded-xl
+							gap-x-1 xl:gap-x-2
+							px-2 xl:px-4
+						"
+					>
+						<div 
+							class="
+								flex
+								w-6
+								justify-end
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#d2a360] via-[#eae885] to-[#d2a360]
+								"
+							>
+									15:
+							</span>
+						</div>
+						<div 
+							class="
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#d2a360] via-[#eae885] to-[#d2a360]
+								"
+							>
+									1.000.000 BP
+							</span>
+						</div>
+					</div>
+					<div 
+						class="
+							scoreItemLarge
+							flex 
+							flex-row 
+							rounded-xl
+							gap-x-1 xl:gap-x-2
+							px-2 xl:px-4
+						"
+					>
+						<div 
+							class="
+								flex
+								w-6
+								justify-end
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+								"
+							>
+									14:
+							</span>
+						</div>
+						<div 
+							class="
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+								"
+							>
+									500.000 BP
+							</span>
+						</div>
+					</div>
+					<div 
+						class="
+							scoreItemLarge
+							flex 
+							flex-row 
+							rounded-xl
+							gap-x-1 xl:gap-x-2
+							px-2 xl:px-4
+						"
+					>
+						<div 
+							class="
+								flex
+								w-6
+								justify-end
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+								"
+							>
+									13:
+							</span>
+						</div>
+						<div 
+							class="
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+								"
+							>
+									250.000 BP
+							</span>
+						</div>
+					</div>
+					<div 
+						class="
+							scoreItemLarge
+							flex 
+							flex-row 
+							rounded-xl
+							gap-x-1 xl:gap-x-2
+							px-2 xl:px-4
+						"
+					>
+						<div 
+							class="
+								flex
+								w-6
+								justify-end
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+								"
+							>
+									12:
+							</span>
+						</div>
+						<div 
+							class="
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+								"
+							>
+									125.000 BP
+							</span>
+						</div>
+					</div>
+					<div 
+						class="
+							scoreItemLarge
+							flex 
+							flex-row 
+							rounded-xl
+							gap-x-1 xl:gap-x-2
+							px-2 xl:px-4
+						"
+					>
+						<div 
+							class="
+								flex
+								w-6
+								justify-end
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+								"
+							>
+									11:
+							</span>
+						</div>
+						<div 
+							class="
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+								"
+							>
+									64.000 BP
+							</span>
+						</div>
+					</div>
+					<div 
+						class="
+							scoreItemLarge
+							flex 
+							flex-row 
+							rounded-xl
+							gap-x-1 xl:gap-x-2
+							px-2 xl:px-4
+						"
+					>
+						<div 
+							class="
+								flex
+								w-6
+								justify-end
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#d2a360] via-[#eae885] to-[#d2a360]
+								"
+							>
+									10:
+							</span>
+						</div>
+						<div 
+							class="
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#d2a360] via-[#eae885] to-[#d2a360]
+								"
+							>
+									32.000 BP
+							</span>
+						</div>
+					</div>
+					<div 
+						class="
+							scoreItemLarge
+							flex 
+							flex-row 
+							rounded-xl
+							gap-x-1 xl:gap-x-2
+							px-2 xl:px-4
+						"
+					>
+						<div 
+							class="
+								flex
+								w-6
+								justify-end
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+								"
+							>
+									9:
+							</span>
+						</div>
+						<div 
+							class="
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+								"
+							>
+									16.000 BP
+							</span>
+						</div>
+					</div>
+					<div 
+						class="
+							scoreItemLarge
+							flex 
+							flex-row 
+							rounded-xl
+							gap-x-1 xl:gap-x-2
+							px-2 xl:px-4
+						"
+					>
+						<div 
+							class="
+								flex
+								w-6
+								justify-end
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+								"
+							>
+									8:
+							</span>
+						</div>
+						<div 
+							class="
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+								"
+							>
+									8.000 BP
+							</span>
+						</div>
+					</div>
+					<div 
+						class="
+							scoreItemLarge
+							flex 
+							flex-row 
+							rounded-xl
+							gap-x-1 xl:gap-x-2
+							px-2 xl:px-4
+						"
+					>
+						<div 
+							class="
+								flex
+								w-6
+								justify-end
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+								"
+							>
+									7:
+							</span>
+						</div>
+						<div 
+							class="
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+								"
+							>
+									4.000 BP
+							</span>
+						</div>
+					</div>
+					<div 
+						class="
+							scoreItemLarge
+							flex 
+							flex-row 
+							rounded-xl
+							gap-x-1 xl:gap-x-2
+							px-2 xl:px-4
+						"
+					>
+						<div 
+							class="
+								flex
+								w-6
+								justify-end
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+								"
+							>
+									6:
+							</span>
+						</div>
+						<div 
+							class="
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+								"
+							>
+									2.000 BP
+							</span>
+						</div>
+					</div>
+					<div 
+						class="
+							scoreItemLarge
+							flex 
+							flex-row 
+							rounded-xl
+							gap-x-1 xl:gap-x-2
+							px-2 xl:px-4
+						"
+					>
+						<div 
+							class="
+								flex
+								w-6
+								justify-end
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#d2a360] via-[#eae885] to-[#d2a360]
+								"
+							>
+									5:
+							</span>
+						</div>
+						<div 
+							class="
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#d2a360] via-[#eae885] to-[#d2a360]
+								"
+							>
+									1.000 BP
+							</span>
+						</div>
+					</div>
+					<div 
+						class="
+							scoreItemLarge
+							flex 
+							flex-row 
+							rounded-xl
+							gap-x-1 xl:gap-x-2
+							px-2 xl:px-4
+						"
+					>
+						<div 
+							class="
+								flex
+								w-6
+								justify-end
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+								"
+							>
+									4:
+							</span>
+						</div>
+						<div 
+							class="
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+								"
+							>
+									500 BP
+							</span>
+						</div>
+					</div>
+					<div 
+						class="
+							scoreItemLarge
+							flex 
+							flex-row 
+							rounded-xl
+							gap-x-1 xl:gap-x-2
+							px-2 xl:px-4
+						"
+					>
+						<div 
+							class="
+								flex
+								w-6
+								justify-end
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+								"
+							>
+									3:
+							</span>
+						</div>
+						<div 
+							class="
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+								"
+							>
+									300 BP
+							</span>
+						</div>
+					</div>
+					<div 
+						class="
+							scoreItemLarge
+							flex 
+							flex-row 
+							rounded-xl
+							gap-x-1 xl:gap-x-2
+							px-2 xl:px-4
+						"
+					>
+						<div 
+							class="
+								flex
+								w-6
+								justify-end
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+								"
+							>
+									2:
+							</span>
+						</div>
+						<div 
+							class="
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+								"
+							>
+									200 BP
+							</span>
+						</div>
+					</div>
+					<div 
+						class="
+							scoreItemLarge
+							flex 
+							flex-row 
+							rounded-xl
+							gap-x-1 xl:gap-x-2
+							px-2 xl:px-4
+						"
+					>
+						<div 
+							class="
+								flex
+								w-6
+								justify-end
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+								"
+							>
+									1:
+							</span>
+						</div>
+						<div 
+							class="
+								font-bold
+								xl:font-extrabold
+							"
+						>
+							<span 
+								class="
+									bg-clip-text 
+									text-transparent
+									bg-gradient-to-tl from-[#a6a6a6] via-[#E3E3E3] to-[#a6a6a6]
+								"
+							>
+									100 BP
+							</span>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+	<script src="app.js" type="text/javascript"></script>
+  </body>
+</html>

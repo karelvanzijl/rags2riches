@@ -1,0 +1,92 @@
+body {
+	background-image: url('img/bg.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	color: #ffffff;
+	font-family: 400 12px/1.625 "League Spartan","Helvetica Neue", Helvetica, Muli, sans-serif;
+}
+
+.logo {
+	background-image: url('img/logo.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: contain;
+}
+
+/* 
+	Answers selected
+ */
+.answer.selected {
+	cursor: wait;
+	background-image: linear-gradient(to top right, #eae885, #7e5824, #eae885);
+}
+
+.answer.selected > div {
+	color: #101011;
+	background-image: linear-gradient(to top right, #7e5824, #eae885, #7e5824);
+}
+
+.answer.selected > div > div > span {
+	background-clip: unset;
+	background-image: none;
+	color: #101011;
+}
+
+/*
+	Answer noselect
+ */
+ .answer.noselect {
+	cursor: default;
+}
+
+/* 
+	Answers disabled
+ */
+.answer:not(.noselect).disabled {
+	cursor: wait;
+}
+
+/* 
+	Answers correct
+ */
+ .answer.correct {
+	background-image: linear-gradient(to top right, #2cbf23, #218503, #2cbf23);
+}
+
+.answer.correct > div {
+	background-image: linear-gradient(to top right, #218503, #2cbf23, #67f53cd2, #2cbf23, #218503);
+}
+
+.answer.correct > div > div > span {
+	background-clip: unset;
+	background-image: none;
+	color: #ffffff;
+}
+
+.answer.incorrect {
+	background-image: linear-gradient(to top right, #bf3323, #921001, #bf3323);
+}
+
+.answer.incorrect > div {
+	background-image: linear-gradient(to top right, #921001, #bf3323, #f44937, #bf3323, #921001);
+}
+
+.answer.incorrect > div > div > span {
+	background-clip: unset;
+	background-image: none;
+	color: #ffffff;
+}
+
+
+
+
+.currentScoreItem {
+	background-image: linear-gradient(to top right, #eae885, #7e5824);
+}
+
+.currentScoreItem span {
+	color: #101011;
+}
